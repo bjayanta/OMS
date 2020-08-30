@@ -1,8 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (request, response) => {
-    response.send("Hello World!")
-})
+const postRoute = require('./routes/posts')
+app.use('/posts', postRoute)
 
 module.exports = app
